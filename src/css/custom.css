@@ -1,0 +1,273 @@
+/**
+ * RankscaleAI Documentation - Custom Styles
+ * Inspired by the landing page design with blue-to-purple gradients
+ */
+
+/* Custom CSS Variables for Brand Colors */
+:root {
+  /* Primary Brand Colors (Blue to Purple Gradient) */
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+  
+  /* Secondary Colors (Purple) */
+  --ifm-color-secondary: #9333ea;
+  --ifm-color-secondary-dark: #7c3aed;
+  --ifm-color-secondary-darker: #6d28d9;
+  --ifm-color-secondary-darkest: #5b21b6;
+  --ifm-color-secondary-light: #a855f7;
+  --ifm-color-secondary-lighter: #c084fc;
+  --ifm-color-secondary-lightest: #e9d5ff;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #9333ea 100%);
+  --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  
+  /* Other theme colors */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.1);
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.9);
+  --ifm-navbar-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Hover states */
+  --ifm-color-primary-hover: #2563eb;
+  --ifm-color-secondary-hover: #7c3aed;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+  
+  --ifm-color-secondary: #a855f7;
+  --ifm-color-secondary-dark: #9333ea;
+  --ifm-color-secondary-darker: #7c3aed;
+  --ifm-color-secondary-darkest: #6d28d9;
+  --ifm-color-secondary-light: #c084fc;
+  --ifm-color-secondary-lighter: #d8b4fe;
+  --ifm-color-secondary-lightest: #e9d5ff;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.2);
+  --ifm-navbar-background-color: rgba(31, 41, 55, 0.9);
+}
+
+/* Gradient Text Utilities */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.gradient-text-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Navbar Styling */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--ifm-navbar-shadow);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.navbar__title {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Sidebar Styling */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.menu__link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.menu__link:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+  background: var(--gradient-primary);
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Hero Section for Doc Pages */
+.hero {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Table of Contents */
+.table-of-contents {
+  border-left: 3px solid transparent;
+  background: linear-gradient(white, white), var(--gradient-primary);
+  background-clip: padding-box, border-box;
+  border-radius: 8px;
+}
+
+.table-of-contents__link {
+  transition: all 0.3s ease;
+}
+
+.table-of-contents__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Buttons */
+.button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+}
+
+.button--primary:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.button--secondary {
+  background: transparent;
+  border: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.button--secondary:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: 12px;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.admonition-heading {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  margin: -16px -16px 16px -16px;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+/* Code Blocks */
+.prism-code {
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Search */
+.DocSearch-Button {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.DocSearch-Button:hover {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.footer__title {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .navbar__title {
+    font-size: 1.25rem;
+  }
+}
