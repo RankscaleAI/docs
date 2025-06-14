@@ -1,7 +1,12 @@
 {
-  "name": "doc",
+  "name": "rankscale-docs",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://github.com/RankscaleAI/docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RankscaleAI/docs.git"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
