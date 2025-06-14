@@ -1,0 +1,12 @@
+name = "rankscale-docs"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./build"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# 环境变量配置
+[vars]
+ENVIRONMENT = "production" 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # RankscaleAI 介绍
 
 让我们用 **RankscaleAI** 在不到5分钟内创建高质量的SEO优化内容。
